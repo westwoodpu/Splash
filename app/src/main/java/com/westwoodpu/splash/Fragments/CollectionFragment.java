@@ -1,6 +1,6 @@
 package com.westwoodpu.splash.Fragments;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 
 import butterknife.BindView;
 

@@ -23,13 +23,15 @@ public class ServiceGenerator {
     private static Gson gson = new GsonBuilder().create();
 
     private static HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
+
+    //warning: the Client-ID needs to add a space behind it to load the images otherwise it won't work
     private static OkHttpClient.Builder okHttpClientBuilder = new OkHttpClient.Builder()
             .addInterceptor(httpLoggingInterceptor)
             .addInterceptor(new Interceptor() {
                 @Override
                 public Response intercept(Chain chain) throws IOException {
                     Request request = chain.request().newBuilder()
-                            .addHeader("Authorizaiton", "Client-ID" + Constants.APPLICATION_ID)
+                            .addHeader("Authorization", "Client-ID " + Constants.APPLICATION_ID)
                             .build();
                     return chain.proceed(request);
                 }
@@ -37,7 +39,7 @@ public class ServiceGenerator {
 
     private static OkHttpClient okHttpClient = okHttpClientBuilder.build();
 
-    public static <T> T createSerVice(Class<T> serviceClass) {
+    public static <T> T createService(Class<T> serviceClass) {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .client(okHttpClient)

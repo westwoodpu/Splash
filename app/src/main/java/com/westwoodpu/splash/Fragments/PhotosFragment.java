@@ -1,6 +1,7 @@
 package com.westwoodpu.splash.Fragments;
 
-import android.app.Fragment;
+
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -62,7 +63,7 @@ public class PhotosFragment extends Fragment{
     }
 
     private void getPhotos() {
-        ApiInterface apiInterface = ServiceGenerator.createSerVice(ApiInterface.class);
+        ApiInterface apiInterface = ServiceGenerator.createService(ApiInterface.class);
         Call<List<Photo>> call = apiInterface.getPhotos();
         call.enqueue(new Callback<List<Photo>>() {
             @Override
