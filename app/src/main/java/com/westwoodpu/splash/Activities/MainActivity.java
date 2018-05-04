@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
 
 import com.westwoodpu.splash.Fragments.CollectionFragment;
+import com.westwoodpu.splash.Fragments.CollectionsFragment;
 import com.westwoodpu.splash.Fragments.PhotosFragment;
 import com.westwoodpu.splash.R;
 import com.westwoodpu.splash.Utils.Functions;
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             PhotosFragment photosFragment = new PhotosFragment();
             Functions.changeMainFragement(MainActivity.this, photosFragment);
         } else if (id == R.id.nav_collections) {
-            CollectionFragment collectionsFragment = new CollectionFragment();
+            CollectionsFragment collectionsFragment = new CollectionsFragment();
             Functions.changeMainFragement(MainActivity.this, collectionsFragment);
         }
 
