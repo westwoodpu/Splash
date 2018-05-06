@@ -2,11 +2,13 @@ package com.westwoodpu.splash.Models;
 
 import com.google.gson.annotations.SerializedName;
 
+import io.realm.RealmObject;
+
 /**
- * Created by nxa16819 on 4/16/2018.
+ * profile image class with image size settings
  */
 
-public class ProfileImage {
+public class ProfileImage extends RealmObject {
     @SerializedName("small")
     private String small;
     @SerializedName("medium")
