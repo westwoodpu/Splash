@@ -13,8 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
 
-import com.westwoodpu.splash.Fragments.CollectionFragment;
 import com.westwoodpu.splash.Fragments.CollectionsFragment;
+import com.westwoodpu.splash.Fragments.FavoriteFragment;
 import com.westwoodpu.splash.Fragments.PhotosFragment;
 import com.westwoodpu.splash.R;
 import com.westwoodpu.splash.Utils.Functions;
@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_collections) {
             CollectionsFragment collectionsFragment = new CollectionsFragment();
             Functions.changeMainFragement(MainActivity.this, collectionsFragment);
+        } else if (id == R.id.nav_favorite) {
+            FavoriteFragment favoriteFragment = new FavoriteFragment();
+            Functions.changeMainFragement(MainActivity.this, favoriteFragment);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

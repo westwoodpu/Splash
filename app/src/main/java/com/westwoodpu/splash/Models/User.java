@@ -2,11 +2,13 @@ package com.westwoodpu.splash.Models;
 
 import com.google.gson.annotations.SerializedName;
 
+import io.realm.RealmObject;
+
 /**
- * Created by nxa16819 on 4/16/2018.
+ * models class to save user information
  */
 
-public class User {
+public class User extends RealmObject{
     @SerializedName("id")
     private String id;
     @SerializedName("username")

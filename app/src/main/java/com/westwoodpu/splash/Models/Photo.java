@@ -2,12 +2,18 @@ package com.westwoodpu.splash.Models;
 
 import com.google.gson.annotations.SerializedName;
 
+
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+
 /**
- * Created by nxa16819 on 4/16/2018.
+ * Photo class extends the realmobject
+ * with the primary key and serilization
  */
 
-public class Photo {
+public class Photo extends RealmObject{
     @SerializedName("id")
+    @PrimaryKey
     private String id;
     @SerializedName("description")
     private String description;

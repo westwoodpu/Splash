@@ -2,11 +2,13 @@ package com.westwoodpu.splash.Models;
 
 import com.google.gson.annotations.SerializedName;
 
+import io.realm.RealmObject;
+
 /**
  * Created by nxa16819 on 4/16/2018.
  */
 
-public class PhotoUrl {
+public class PhotoUrl extends RealmObject{
     @SerializedName("raw")
     private String raw;
     @SerializedName("full")
