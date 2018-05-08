@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.westwoodpu.splash">
+    package="com.westwoodpu.backGroundMachine">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
@@ -12,11 +12,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".Application.AppController"
+        android:name="com.westwoodpu.backGroundMachine.Application.AppController"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.MainActivity"
+        <activity android:name="com.westwoodpu.backGroundMachine.Activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:label="Wallpaper"
+            android:label="BackGroundMachine"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activities.FullScreenPhotoActivity"
+        <activity android:name="com.westwoodpu.backGroundMachine.Activities.FullScreenPhotoActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation"
             android:screenOrientation="portrait">

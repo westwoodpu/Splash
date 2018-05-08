@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.westwoodpu.splash.Utils.SquareImage
+    <com.westwoodpu.backGroundMachine.Utils.SquareImage
         android:id="@+id/item_collection_photo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
